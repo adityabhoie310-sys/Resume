@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Build Resume</title>
+        <meta name="description" content="Bootstrap 3D resume builder website">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/main.css">
+    </head>
+    <body class="bootstrap-site">
+        <nav class="navbar navbar-expand-lg bg-white fixed-top">
+            <div class="container">
+                <a href="index.html" class="navbar-brand">
+                    <img src="assets/curriculum-vitae.png" alt="" class="navbar-brand-icon">
+                    <span class="navbar-brand-text">build <span>resume.</span></span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <div class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+                        <a class="nav-link" href="#features">Features</a>
+                        <a class="nav-link" href="#templates">Templates</a>
+                        <a href="resume.html" class="btn btn-primary text-uppercase">Create Resume</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <header class="hero-3d" id="header">
+            <canvas id="resume-3d-scene" aria-hidden="true"></canvas>
+            <div class="container position-relative">
+                <div class="row align-items-center min-vh-100 g-5">
+                    <div class="col-lg-6">
+                        <p class="eyebrow text-uppercase mb-3">online resume builder</p>
+                        <h1 class="display-3 fw-bold">Build a polished resume in a sharper 3D workspace.</h1>
+                        <p class="lead mt-4">Use a focused Bootstrap resume builder with live preview, print support, and PDF download for your final CV.</p>
+                        <div class="d-flex flex-wrap gap-3 mt-4">
+                            <a href="resume.html" class="btn btn-primary btn-lg text-uppercase">Create My Resume</a>
+                            <a href="#features" class="btn btn-outline-light btn-lg text-uppercase">View Features</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="resume-stack-3d" aria-label="Resume preview illustration">
+                            <div class="resume-sheet sheet-back"></div>
+                            <div class="resume-sheet sheet-mid"></div>
+                            <div class="resume-sheet sheet-front">
+                                <div class="sheet-line sheet-title"></div>
+                                <div class="sheet-row"></div>
+                                <div class="sheet-row short"></div>
+                                <div class="sheet-block"></div>
+                                <div class="sheet-row"></div>
+                                <div class="sheet-row medium"></div>
+                                <div class="sheet-block small"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="section-one bootstrap-band" id="templates">
+                <div class="container">
+                    <div class="row align-items-center g-5">
+                        <div class="col-lg-6">
+                            <div class="tilt-panel">
+                                <div class="panel-toolbar">
+                                    <span></span><span></span><span></span>
+                                </div>
+                                <div class="panel-content">
+                                    <div class="panel-avatar"></div>
+                                    <div class="panel-lines">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <h2 class="lg-title">Use the resume maker as your guide.</h2>
+                            <p class="text">Fill in your details once and watch the preview update while you build. The interface keeps your original resume sections but gives them a cleaner Bootstrap layout and dimensional feel.</p>
+                            <div class="d-flex flex-wrap gap-3 mt-4">
+                                <a href="resume.html" class="btn btn-primary text-uppercase">Start Building</a>
+                                <a href="#features" class="btn btn-secondary text-uppercase">See Tools</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-two bg-bright" id="features">
+                <div class="container">
+                    <div class="row g-4">
+                        <div class="col-md-6 col-lg-4">
+                            <article class="feature-card-3d h-100">
+                                <span class="feature-number">01</span>
+                                <h5>Live resume preview</h5>
+                                <p>Type into the form and the preview updates with your details, skills, education, work, projects, and achievements.</p>
+                            </article>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <article class="feature-card-3d h-100">
+                                <span class="feature-number">02</span>
+                                <h5>Print and download</h5>
+                                <p>Use the existing print and PDF download controls with a clearer button state while the resume is being prepared.</p>
+                            </article>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <article class="feature-card-3d h-100">
+                                <span class="feature-number">03</span>
+                                <h5>Bootstrap structure</h5>
+                                <p>Responsive Bootstrap rows, columns, navigation, buttons, and spacing make the website easier to maintain.</p>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer bg-dark">
+            <div class="container">
+                <div class="footer-content text-center">
+                    <p class="fs-15">&copy;Copyright 2022. All Rights Reserved - <span>build.resume</span></p>
+                </div>
+            </div>
+        </footer>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/three-scene.js"></script>
+    </body>
+</html>
